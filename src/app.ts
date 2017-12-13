@@ -2,7 +2,9 @@ import * as dotenv from 'dotenv';
 import * as path from 'path';
 import * as restify from 'restify';
 import * as BotBuilder from 'botbuilder';
+
 import greeting from './plugins/greeting/index';
+import cryptocurrency from './plugins/cryptocurrency/index';
 
 // Load configuration in process.env from the .env file
 dotenv.config();
@@ -30,3 +32,4 @@ bot.recognizer(new BotBuilder.LuisRecognizer(model));
 
 // Libraries initialization
 bot.library(greeting);
+bot.library(cryptocurrency);
